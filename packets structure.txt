@@ -1,0 +1,21 @@
+UDP (ronnie to ground):
+roll,pitch,heading,hspeed,vspeed,altitude,voltage,latitude,longitude,mode,sub-mode,next-waypoint
+3 packets per second
+
+
+TCP (ground to ronnie):
+type 1 (waypoints update)
+(latitude,longitude);(latitude,longitude);.....
+sent when pressing "DONE" on waypoint screen
+
+type 2 (cruising altitude update)
+"cruising="altitude
+sent when choosing altitude
+
+type 3 (sub-mode update)
+"sub-mode="sub-mode (can be holding\waypoint\rth)
+sent when pressing a sub-mode button
+
+type 4 (homepoint set at start)
+"homepoint="+(lat,long)
+sent when pilot location is first loaded
